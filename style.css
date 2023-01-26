@@ -85,7 +85,7 @@ body {
 
 /* form */
 .form-section {
-  background-color: #FAF8F1;
+  background-color: #faf8f1;
 
   flex: 1;
 
@@ -112,17 +112,44 @@ body {
 .form-section form {
   background-color: white;
   width: 500px;
-  height: 400px;
+  height: 300px;
 
   border-radius: 20px;
 
   padding: 30px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  display: flex;
+  flex-direction: column;
 }
 
+form .disclaimer {
+  margin-bottom: 20px;
+}
+
+form .disclaimer p {
+  margin: 5px;
+}
+
+form .disclaimer p:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+form .disclaimer p:nth-child(2) {
+  font-size: 13px;
+}
+
+/* form controls */
+
 form .inputs {
+  flex: 1;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
 }
 
 form .inputs .form-control {
@@ -133,8 +160,16 @@ form .inputs .form-control {
 }
 
 form .inputs .form-control label {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 2px;
+}
+
+form .inputs .form-control input {
+  width: 160px;
+  height: 25px;
+
+  border-radius: 5px;
+  border: 1px solid lightgray;
 }
 
 .form-section .buttons {
@@ -148,7 +183,7 @@ form .inputs .form-control label {
   width: 200px;
   height: 50px;
 
-  background-color: #C58940;
+  background-color: #c58940;
 
   border: none;
   border-radius: 10px;
@@ -156,6 +191,10 @@ form .inputs .form-control label {
   font-size: 20px;
 
   color: white;
+}
+
+.form-section .buttons button:hover {
+  cursor: pointer;
 }
 
 .form-section .buttons div {
